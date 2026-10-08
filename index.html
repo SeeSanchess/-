@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Структура HTML страницы</title>
+    <title>Бирюса - бытовая техника</title>
     <link rel="stylesheet" href="style.css">
     <!-- Иконка сайта во вкладке браузера -->
     <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <!-- Шапка сайта -->
@@ -28,34 +29,173 @@
     </div>
 </header>
 
-    <!-- Основной контент страницы (один на странице) -->
-    <main>
-        <section>
-            <h2>Добро пожаловать!</h2>
-            <p>Любой текст</p>
+    <!-- Слайдер с холодильниками (на всю ширину как header) -->
+    <section class="slider-section">
+        <div class="slider-container">
+            <div class="slider">
+                    <div class="slide active">
+                        <div class="slide-image">
+                            <img src="img/8.png" alt="Холодильник Бирюса Premium">
+                        </div>
+                        <div class="slide-content">
+                            <h3>Холодильник Бирюса Premium</h3>
+                            <p class="slide-description">Элитная модель с системой No Frost, сенсорным управлением и энергопотреблением класса A+++. Вместимость 350 литров, зона свежести, функция суперзаморозки.</p>
+                            <div class="slide-features">
+                                <span class="feature">No Frost</span>
+                                <span class="feature">A+++</span>
+                                <span class="feature">350л</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="slide">
+                        <div class="slide-image">
+                            <img src="img/9.png" alt="Холодильник Бирюса Standard">
+                        </div>
+                        <div class="slide-content">
+                            <h3>Холодильник Бирюса Standard</h3>
+                            <p class="slide-description">Классическая модель для ежедневного использования. Энергоэффективность класса A++, система охлаждения Direct Cool, регулируемые полки, отделение для овощей и фруктов.</p>
+                            <div class="slide-features">
+                                <span class="feature">Direct Cool</span>
+                                <span class="feature">A++</span>
+                                <span class="feature">280л</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="slide">
+                        <div class="slide-image">
+                            <img src="img/10.png" alt="Холодильник Бирюса Compact">
+                        </div>
+                        <div class="slide-content">
+                            <h3>Холодильник Бирюса Compact</h3>
+                            <p class="slide-description">Компактная модель для небольших кухонь и офисов. Идеальное решение для ограниченного пространства без компромиссов в качестве и функциональности.</p>
+                            <div class="slide-features">
+                                <span class="feature">Компактный</span>
+                                <span class="feature">A+</span>
+                                <span class="feature">180л</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="slide">
+                        <div class="slide-image">
+                            <img src="img/11.png" alt="Стиральная машина Бирюса">
+                        </div>
+                        <div class="slide-content">
+                            <h3>Холодильник Бирюса Family</h3>
+                            <p class="slide-description">Семейная модель повышенной вместимости. Идеально подходит для большой семьи, имеет зону свежести для мяса и рыбы, отдельные отсеки для разных продуктов.</p>
+                            <div class="slide-features">
+                                <span class="feature">Семейный</span>
+                                <span class="feature">A++</span>
+                                <span class="feature">420л</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="slide">
+                        <div class="slide-image">
+                            <img src="img/12.png" alt="Холодильник Бирюса Pro">
+                        </div>
+                        <div class="slide-content">
+                            <h3>Холодильник Бирюса Pro</h3>
+                            <p class="slide-description">Профессиональная модель для гурманов. Имеет точную систему контроля температуры, винное отделение, генератор льда и продвинутую систему циркуляции воздуха.</p>
+                            <div class="slide-features">
+                                <span class="feature">Профессиональный</span>
+                                <span class="feature">A+++</span>
+                                <span class="feature">380л</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Кнопки управления слайдером -->
+                <div class="slider-controls">
+                    <button class="slider-btn prev">‹</button>
+                    <div class="slider-dots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                    <button class="slider-btn next">›</button>
+                </div>
+            </div>
         </section>
 
-        <!-- Раздел с несколькими карточками/новостями -->
-        <section class="test">
-            <h2>Наши новости</h2>
 
-            <article>
-                <h3>Первая статья</h3>
-                <p>Краткое описание новости или самостоятельного блока контента.</p>
-                <a class = "btn" href="#">Читать далее</a>
-            </article>
+        <!-- Основной контент страницы (один на странице) -->
+    <main>
+        <!-- Черная разделительная полоса -->
+        <div class="black-divider"></div>
 
-            <article>
-                <h3>Вторая статья</h3>
-                <p>Ещё один автономный блок контента.</p>
-                <a class = "btn" href="#">Читать далее</a>
-            </article>
+        <!-- Раздел с карточками товаров -->
+        <section class="products-section">
+            <div class="products-container">
+                <div class="products-grid">
+                    <article class="product-card">
+                        <div class="product-image">
+                            <img src="img/1.png" alt="Холодильники">
+                        </div>
+                        <h3>Холодильники</h3>
+                        <a class="product-btn" href="#">Подробнее</a>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-image">
+                            <img src="img/2.png" alt="Морозильные камеры">
+                        </div>
+                        <h3>Морозильные камеры</h3>
+                        <a class="product-btn" href="#">Подробнее</a>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-image">
+                            <img src="img/3.png" alt="Морозильные лари">
+                        </div>
+                        <h3>Морозильные лари</h3>
+                        <a class="product-btn" href="#">Подробнее</a>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-image">
+                            <img src="img/стрей.jpg" alt="Холодильные шкафы">
+                        </div>
+                        <h3>Холодильные шкафы</h3>
+                        <a class="product-btn" href="#">Подробнее</a>
+                    </article>
+                    
+                    <!-- Добавлю еще карточки для демонстрации прокрутки -->
+                    <article class="product-card">
+                        <div class="product-image">
+                            <img src="img/920x378-2.webp" alt="Холодильные витрины">
+                        </div>
+                        <h3>Холодильные витрины</h3>
+                        <a class="product-btn" href="#">Подробнее</a>
+                    </article>
+                    
+                    <article class="product-card">
+                        <div class="product-image">
+                            <img src="img/AQAORtoY4lCijhn01lrjabfuXPw8cAKd1YUx5I4wJa6lGyPbQAvECRg1M6jOSL9nysm13DnS33h_dZNB2HS-97ZSZwo.jpg" alt="Промышленные холодильники">
+                        </div>
+                        <h3>Промышленные холодильники</h3>
+                        <a class="product-btn" href="#">Подробнее</a>
+                    </article>
+                </div>
+            </div>
         </section>
 
         <!-- Боковая панель с дополнительным контентом -->
-        <aside>
-            <h3>Полезные заметки</h3>
-            <p>Блок с дополнительной информацией, рекламой или ссылками.</p>
+        <aside class="info-sidebar">
+            <h3>Преимущества техники Бирюса</h3>
+            <ul class="advantages-list">
+                <li>Энергоэффективность класса A++</li>
+                <li>Гарантия 5 лет</li>
+                <li>Бесплатная доставка по городу</li>
+                <li>Профессиональная установка</li>
+                <li>Круглосуточная сервисная поддержка</li>
+            </ul>
         </aside>
 
     </main>
