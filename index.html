@@ -21,9 +21,9 @@
 
         <nav>
             <ul>
-                <li><a href="index.html">Главная</a></li>
+                <li><a href="index.html">Cтать лидером</a></li>
                 <li><a href="#">Каталог</a></li>
-                <li><a href="#">Как нас найти</a></li>
+                <li><a href="#contacts">Как нас найти</a></li>
             </ul>
         </nav>
     </div>
@@ -135,16 +135,18 @@
             <div class="products-container">
                 <div class="products-grid">
                     <article class="product-card">
-                        <div class="product-image">
-                            <img src="img/1.png" alt="Холодильники">
-                        </div>
+                        <a href="refrigerators.html" class="product-image-link">
+                            <div class="product-image">
+                                <img src="img/2.png" alt="Холодильники">
+                            </div>
+                        </a>
                         <h3>Холодильники</h3>
-                        <a class="product-btn" href="#">Подробнее</a>
+                        <a class="product-btn" href="refrigerators.html">Подробнее</a>
                     </article>
 
                     <article class="product-card">
                         <div class="product-image">
-                            <img src="img/2.png" alt="Морозильные камеры">
+                            <img src="img/3.png" alt="Морозильные камеры">
                         </div>
                         <h3>Морозильные камеры</h3>
                         <a class="product-btn" href="#">Подробнее</a>
@@ -152,7 +154,7 @@
 
                     <article class="product-card">
                         <div class="product-image">
-                            <img src="img/3.png" alt="Морозильные лари">
+                            <img src="img/4.png" alt="Морозильные лари">
                         </div>
                         <h3>Морозильные лари</h3>
                         <a class="product-btn" href="#">Подробнее</a>
@@ -160,7 +162,7 @@
 
                     <article class="product-card">
                         <div class="product-image">
-                            <img src="img/стрей.jpg" alt="Холодильные шкафы">
+                            <img src="img/5.png" alt="Холодильные шкафы">
                         </div>
                         <h3>Холодильные шкафы</h3>
                         <a class="product-btn" href="#">Подробнее</a>
@@ -201,10 +203,67 @@
     </main>
 
     <!-- Подвал сайта с якорем #contacts -->
-    <footer>
-        <h2>Контакты</h2>
-        <p>Свяжитесь с нами: <a href="mailto:info@example.com">info@example.com</a></p>
-        <p>&copy; 2026 Все права защищены.</p>
+    <footer id="contacts">
+        <div class="footer-content">
+            <!-- Контактные данные -->
+            <div class="contact-info">
+                <h2>Контактные данные</h2>
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div>
+                            <strong>Адрес:</strong>
+                            <p>пр. им. газеты «Красноярский рабочий», 29, Красноярск, 660059</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">📞</div>
+                        <div>
+                            <strong>Телефон:</strong>
+                            <p><a href="tel:+73912319622">+7 (391) 231-96-22</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">✉️</div>
+                        <div>
+                            <strong>Email:</strong>
+                            <p><a href="mailto:sales@biryusa.ru">sales@biryusa.ru</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">🕒</div>
+                        <div>
+                            <strong>Режим работы:</strong>
+                            <p>Пн–Пт с 08:00 до 17:00</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="copyright">
+                    <p>&copy; 2026 Бирюса. Все права защищены.</p>
+                </div>
+            </div>
+            
+            <!-- Интерактивная карта -->
+            <div class="map-section">
+                <h3>Как нас найти</h3>
+                <div class="map-container">
+                    <!-- Встраиваемая карта Yandex -->
+                    <iframe 
+                        src="https://yandex.ru/map-widget/v1/?ll=92.842725%2C56.011938&z=16&pt=92.842725%2C56.011938&l=map" 
+                        width="100%" 
+                        height="400" 
+                        frameborder="0" 
+                        allowfullscreen="true" 
+                        style="border:0; border-radius: 8px;">
+                    </iframe>
+                    <p class="map-note">Карта предоставлена сервисом Яндекс.Карты</p>
+                </div>
+            </div>
+        </div>
     </footer>
 
 </body>

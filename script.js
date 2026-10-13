@@ -172,3 +172,32 @@ document.addEventListener('DOMContentLoaded', function() {
         updateScrollIndicators();
     }
 });
+// Плавная прокрутка к контактам
+document.addEventListener('DOMContentLoaded', function() {
+    // Проверяем все ссылки с якорями
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            
+            // Пропускаем ссылки без якоря
+            if (href === '#') return;
+            
+            // Плавная прокрутка для якоря #contacts
+            if (href === '#contacts') {
+                e.preventDefault();
+                
+                const targetElement = document.querySelector(href);
+                if (targetElement) {
+                    // Вычисляем положение элемента с учетом высоты страницы
+                    const headerHeight = document.querySelector('.site-header').offsetHeight;
+                    const targetPosition = targetElement.offsetTop - headerHeight - 20;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            }
+        });
+    });
+});
